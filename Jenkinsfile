@@ -22,14 +22,14 @@ pipeline {
             parallel {
                 stage('Frontend Docker Build') {
                     steps {
-                        dir('frontend') {
+                        dir('project-frontend') {
                             bat "docker build --no-cache -t ${FRONTEND_IMAGE} ."
                         }
                     }
                 }
                 stage('Backend Docker Build') {
                     steps {
-                        dir('backend') {
+                        dir('project-backend') {
                             bat "docker build --no-cache -t ${BACKEND_IMAGE} ."
                         }
                     }
