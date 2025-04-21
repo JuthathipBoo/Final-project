@@ -58,14 +58,14 @@ pipeline {
                 stage('Frontend Docker Build') {
                     steps {
                         dir('frontend') {
-                            sh "docker build -t ${FRONTEND_IMAGE} ."
+                            sh "docker build --no-cache -t ${FRONTEND_IMAGE} ."
                         }
                     }
                 }
                 stage('Backend Docker Build') {
                     steps {
                         dir('backend') {
-                            sh "docker build -t ${BACKEND_IMAGE} ."
+                            sh "docker build --no-cache -t ${BACKEND_IMAGE} ."
                         }
                     }
                 }
@@ -83,7 +83,7 @@ pipeline {
                     docker rm ${BACKEND_IMAGE} || true
 
                     docker run -d --name ${BACKEND_IMAGE} -p 8500:8750 ${BACKEND_IMAGE}
-                    docker run -d --name ${FRONTEND_IMAGE} -p 3500:3000 --env BACKEND_URL=http://localhost:8750 ${FRONTEND_IMAGE}
+                    docker run -d --name ${FRONTEND_IMAGE} -p 3500:3000 --env BACKEND_URL=http://localhost:8500 ${FRONTEND_IMAGE}
                 """
                 sh "docker logs ${BACKEND_IMAGE} || true"
                 sh "docker logs ${FRONTEND_IMAGE} || true"
