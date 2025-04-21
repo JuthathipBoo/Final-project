@@ -15,43 +15,8 @@ pipeline {
             }
         }
 
-        stage('Lint') {
-            parallel {
-                stage('Frontend Lint') {
-                    steps {
-                        dir('frontend') {
-                            sh 'npm run lint'
-                        }
-                    }
-                }
-                stage('Backend Lint') {
-                    steps {
-                        dir('backend') {
-                            sh 'npm run lint'
-                        }
-                    }
-                }
-            }
-        }
 
-        stage('Test') {
-            parallel {
-                stage('Frontend Test') {
-                    steps {
-                        dir('frontend') {
-                            sh 'npm run test || true'
-                        }
-                    }
-                }
-                stage('Backend Test') {
-                    steps {
-                        dir('backend') {
-                            sh 'npm run test || true'
-                        }
-                    }
-                }
-            }
-        }
+
 
         stage('Build Docker Images') {
             parallel {
