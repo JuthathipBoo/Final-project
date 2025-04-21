@@ -92,20 +92,25 @@ pipeline {
         }
 
         stage('Deploy Containers') {
-            steps {
-                script {
-                    sh """
-                        docker stop ${FRONTEND_IMAGE} || true
-                        docker rm ${FRONTEND_IMAGE} || true
-                        docker stop ${BACKEND_IMAGE} || true
-                        docker rm ${BACKEND_IMAGE} || true
+    steps {
+        script {
+            catchError(buildResult: 'FAILURE', stageResult: 'FAILURE') {
+                sh """
+                    docker stop ${FRONTEND_IMAGE} || true
+                    docker rm ${FRONTEND_IMAGE} || true
+                    docker stop ${BACKEND_IMAGE} || true
+                    docker rm ${BACKEND_IMAGE} || true
 
-                        docker run -d --name ${BACKEND_IMAGE} -p 5000:5000 ${BACKEND_IMAGE}
-                        docker run -d --name ${FRONTEND_IMAGE} -p 3000:3000 --env BACKEND_URL=http://localhost:5000 ${FRONTEND_IMAGE}
-                    """
-                }
+                    docker run -d --name ${BACKEND_IMAGE} -p 5000:5000 ${BACKEND_IMAGE}
+                    docker run -d --name ${FRONTEND_IMAGE} -p 3000:3000 --env BACKEND_URL=http://localhost:5000 ${FRONTEND_IMAGE}
+                """
+                sh "docker logs ${BACKEND_IMAGE} || true"
+                sh "docker logs ${FRONTEND_IMAGE} || true"
             }
         }
+    }
+}
+
     }
 
     post {
