@@ -15,25 +15,6 @@ pipeline {
             }
         }
 
-        stage('Install Dependencies') {
-            parallel {
-                stage('Frontend Dependencies') {
-                    steps {
-                        dir('frontend') {
-                            sh 'npm install'
-                        }
-                    }
-                }
-                stage('Backend Dependencies') {
-                    steps {
-                        dir('backend') {
-                            sh 'npm install'
-                        }
-                    }
-                }
-            }
-        }
-
         stage('Lint') {
             parallel {
                 stage('Frontend Lint') {
@@ -101,8 +82,8 @@ pipeline {
                     docker stop ${BACKEND_IMAGE} || true
                     docker rm ${BACKEND_IMAGE} || true
 
-                    docker run -d --name ${BACKEND_IMAGE} -p 5000:5000 ${BACKEND_IMAGE}
-                    docker run -d --name ${FRONTEND_IMAGE} -p 3000:3000 --env BACKEND_URL=http://localhost:5000 ${FRONTEND_IMAGE}
+                    docker run -d --name ${BACKEND_IMAGE} -p 8500:8750 ${BACKEND_IMAGE}
+                    docker run -d --name ${FRONTEND_IMAGE} -p 3500:3000 --env BACKEND_URL=http://localhost:8750 ${FRONTEND_IMAGE}
                 """
                 sh "docker logs ${BACKEND_IMAGE} || true"
                 sh "docker logs ${FRONTEND_IMAGE} || true"
