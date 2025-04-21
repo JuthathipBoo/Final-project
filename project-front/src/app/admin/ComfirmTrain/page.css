@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap");
+
+:root {
+  --font-family: "Noto Sans Thai", serif;
+  --yellow: #ffd700;
+  --black: #3d3d3d;
+  --gray: #bebebe;
+  --navy: #1f2937;
+  --greenbase: #266b61;
+  --greenlight: #1d7768;
+  --greenlight2: #1f9480;
+  --greendark: #0b3e3c;
+}
+
+body {
+  font-family: "Noto Sans Thai", serif;
+  background-color: #f7f7f7;
+  margin: 0;
+  padding: 0;
+}
+
+/* .ComfirmTrain-warrapper {
+  padding: 1.5rem;
+  min-height: 100vh;
+  background-color: #f3f4f6;
+} */
+
+.ComfirmTrain-container {
+  padding: 1.5rem;
+  min-height: 100vh;
+  background-color: #f3f4f6;
+  font-family: var(--font-family);
+  /* max-width: 80rem;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  overflow: hidden; */
+}
+
+.ComfirmTrain-header {
+  padding: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+  border-color: #e5e7eb;
+  background-color: var(--greenbase);
+}
+
+.text-header {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: white;
+}
+
+.ComfirmTrain-table-wrapper {
+  overflow-x: auto;
+}
+
+.ComfirmTrain-table-container-wrapper {
+  padding: 1rem;
+  display: flex;
+  gap: 1rem; /* เพิ่มระยะห่างระหว่าง search box */
+  justify-content: space-between; /* จัดให้ search box กระจายเท่ากัน */
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.ComfirmTrain-table-container-search {
+  flex: 1; /* ให้ input มีขนาดสมดุลกับ column */
+  display: flex;
+  flex-direction: column; /* จัดให้ label อยู่บน input */
+  text-align: left;
+}
+
+.ComfirmTrain-table-container-search input {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  color: #374151;
+  background-color: #ffffff;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  width: 50%;
+}
+
+.ComfirmTrain-table-container-search-input {
+  position: relative;
+  width: 20%;
+}
+
+.ComfirmTrain-table-container-search-input input {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem 0.5rem 2.5rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ComfirmTrain-table-container-search-input input:focus {
+  border-color: var(--greenbase);
+  box-shadow: 0 0 5px rgba(106, 17, 203, 0.2);
+}
+
+.ComfirmTrain-table-container-search-input .bi {
+  position: absolute;
+  left: 12px;
+  top: 55%;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  color: #999;
+}
+
+.ComfirmTrain-table-container-button .btn {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 2.1rem;
+  color: white;
+  background: var(--greenbase);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.ComfirmTrain-table-container {
+  table-layout: auto;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.ComfirmTrain-table-header {
+  background-color: #f1f1f1c5;
+}
+
+.ComfirmTrain-table-row-th {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: var(--black);
+}
+
+.ComfirmTrain-table-row-th,
+.ComfirmTrain-table-container-search {
+  width: 10%; /* กำหนดให้แต่ละ column มีขนาดเท่ากัน */
+}
+
+.ComfirmTrain-table-body {
+  border-collapse: collapse;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.ComfirmTrain-table-column:hover {
+  background-color: #f9fafb;
+}
+
+.ComfirmTrain-table-column-td {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 0.875rem;
+  color: #374151;
+  text-align: center;
+}
+
+.ComfirmTrain-table-column-button-edit{
+  color: #2563eb;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.ComfirmTrain-table-column-button-edit:hover {
+  color: #1d4ed8;
+  text-decoration: underline;
+}
+
+.ComfirmTrain-table-column-spacer {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.ComfirmTrain-table-column-button-delete {
+  cursor: pointer;
+  color: #dc2626;
+  text-decoration: none;
+}
+
+.ComfirmTrain-table-column-button-delete:hover {
+  color: #991b1b;
+  text-decoration: underline;
+}

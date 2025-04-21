@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap");
+
+:root {
+  --font-family: "Noto Sans Thai", serif;
+  --yellow: #ffd700;
+  --black: #3d3d3d;
+  --gray: #bebebe;
+  --graylight1: #d9d9d9;
+  --navy: #1f2937;
+  --greenbase: #266b61;
+  --greenlight: #1d7768;
+  --greenlight2: #1f9480;
+  --greendark: #0b3e3c;
+}
+
+.Traininghistory-container-search {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.Traininghistory-container-search input {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  color: #374151;
+  background-color: #ffffff;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  width: 50%;
+}
+
+.Traininghistory-container-search-input {
+  font-family: var(--font-family);
+  position: relative;
+  width: 14%;
+  margin-left: 53px;
+  margin-top: 30px;
+}
+
+.Traininghistory-container-search-input input {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem 0.5rem 2.5rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.Traininghistory-container-search-input input:focus {
+  border-color: var(--greenbase);
+  box-shadow: var(--greenbase);
+}
+
+.Traininghistory-container-search-input .bi {
+  position: absolute;
+  left: 12px;
+  top: 55%;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  color: #999;
+}
+
+.Traininghistory-container {
+  display: flex;
+  font-family: var(--font-family);
+}
+
+.Traininghistory-container-link {
+  margin-left: 53px;
+  margin-top: 45px;
+  gap: 1.5rem;
+  justify-content: start;
+}
+
+.Traininghistory-container-link {
+  display: flex;
+  margin-top: 45px;
+  gap: 1.5rem;
+  transition: transform 0.3s ease-in-out;
+  justify-content: start;
+  flex-grow: 1;
+  margin-left: 3rem;
+}
+
+.Traininghistory-nav-item {
+  color: #333;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  font-family: var(--font-family);
+}
+
+.Traininghistory-nav-item:hover {
+  color: var(--greenlight2);
+}
+
+.custom-modal .form-control {
+  font-size: 1rem;
+  padding: 0.75rem;
+  border-radius: 0.375rem;
+  border: 1px solid #ced4da;
+  margin-bottom: 1rem;
+}
+.custom-modal .modal-dialog {
+  max-width: 800px;
+  margin: 1.75rem auto;
+}
+.custom-modal .modal-content {
+  border-radius: 15px; /* โค้งมน */
+  border: none;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  font-family: "Noto Sans Thai", sans-serif;
+}
+
+/* ปรับ Header ของ Modal */
+.custom-modal .modal-header {
+  background: var(--greenbase);
+  color: white;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+/* ปรับ Body ของ Modal */
+.custom-modal .modal-body {
+  padding: 20px;
+  font-size: 16px;
+  color: #333;
+}
+
+/* ปรับ Footer ของ Modal */
+.custom-modal .modal-footer {
+  background: #f8f9fa;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+/* ปรับแต่งปุ่ม */
+.custom-modal .btn-primary {
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.custom-modal .btn-danger {
+  background-color: #dc3545;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.custom-modal .btn-danger:hover {
+  background-color: #c82333;
+}

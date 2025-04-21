@@ -1,0 +1,363 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap");
+
+:root {
+  --font-family: "Noto Sans Thai", serif;
+  --yellow: #ffd700;
+  --black: #3d3d3d;
+  --gray: #bebebe;
+  --navy: #1f2937;
+  --greenbase: #266b61;
+  --greenlight: #1d7768;
+  --greenlight2: #1f9480;
+  --greendark: #0b3e3c;
+}
+
+body {
+  font-family: "Noto Sans Thai", serif;
+  background-color: #f7f7f7;
+  margin: 0;
+  padding: 0;
+}
+
+.trader-container {
+  padding: 1.5rem;
+  min-height: 100vh;
+  background-color: #f3f4f6;
+  font-family: var(--font-family);
+  /* max-width: 80rem;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  overflow: hidden; */
+}
+
+.trader-header {
+  padding: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+  border-color: #e5e7eb;
+  background-color: var(--greenbase);
+}
+
+.text-header {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: white;
+}
+
+.trader-table-wrapper {
+  overflow-x: auto;
+}
+
+.trader-table-container-wrapper {
+  padding: 1rem;
+  display: flex;
+  gap: 1rem; /* เพิ่มระยะห่างระหว่าง search box */
+  justify-content: space-between; /* จัดให้ search box กระจายเท่ากัน */
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.trader-table-container-search {
+  flex: 1; /* ให้ input มีขนาดสมดุลกับ column */
+  /* display: grid;
+  grid-template-columns: 7fr 1fr; */
+  display: flex;
+  flex-direction: column; /*จัดให้ label อยู่บน input*/
+  text-align: left;
+}
+
+.trader-table-container-search input {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  color: #374151;
+  background-color: #ffffff;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  width: 50%;
+}
+
+.trader-table-container-search-input {
+  position: relative;
+  width: 20%;
+}
+
+.trader-table-container-search-input input {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem 0.5rem 2.5rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.trader-table-container-search-input input:focus {
+  border-color: var(--greenbase);
+  box-shadow: 0 0 5px rgba(106, 17, 203, 0.2);
+}
+
+.trader-table-container-search-input .bi {
+  position: absolute;
+  left: 12px;
+  top: 55%;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  color: #999;
+}
+
+.trader-table-container-button .btn {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 2.1rem;
+  color: var(--greenbase);
+  border-color: var(--greenbase);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+
+}
+
+.trader-table-container-button .btn:hover {
+  color: white;
+  background-color: var(--greenbase);
+}
+
+.trader-table-container-button-clear .btn {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 0.5rem;
+  color: white;
+  background: var(--greenbase);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.trader-table-container {
+  table-layout: auto;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.trader-table-header {
+  background-color: #f1f1f1c5;
+}
+
+.trader-table-row-th {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: var(--black);
+}
+
+.trader-table-row-th,
+.trader-table-container-search {
+  width: 20%; /* กำหนดให้แต่ละ column มีขนาดเท่ากัน */
+}
+
+.trader-table-body {
+  border-collapse: collapse;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.trader-table-column:hover {
+  background-color: #f9fafb;
+}
+
+.trader-table-column-td {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 0.875rem;
+  color: #374151;
+  text-align: center;
+}
+
+.trader-table-column-link-edit {
+  color: #2563eb;
+  cursor: pointer;
+  text-decoration-line: none;
+}
+
+.trader-table-column-link-edit:hover {
+  color: #1d4ed8;
+}
+
+.trader-table-column-spacer {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.trader-table-column-link-delete {
+  cursor: pointer;
+  color: #dc2626;
+  text-decoration-line: none;
+}
+
+.trader-table-column-link-delete:hover {
+  color: #991b1b;
+}
+
+.addtrader-modal .modal-dialog {
+  max-width: 800px;
+
+  margin: 1.75rem auto;
+}
+
+.addtrader-modal .modal-header {
+  background-color: var(--greenbase);
+  border-bottom: 1px solid #e5e5e5;
+  font-weight: 600;
+}
+
+.addtrader-modal .modal-title {
+  font-size: 1.25rem;
+  color: #fff;
+}
+
+.addtrader-modal .modal-body {
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+.addtrader-modal .form-group label {
+  font-size: 1rem;
+  color: #495057;
+  margin-bottom: 5px;
+}
+
+.addtrader-modal .form-control {
+  font-size: 1rem;
+  padding: 0.75rem;
+  border-radius: 0.375rem;
+  border: 1px solid #ced4da;
+  margin-bottom: 1rem;
+}
+
+.addtrader-modal button {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  border-radius: 0.375rem;
+  border: none;
+  cursor: pointer;
+}
+
+.addtrader-modal button:hover {
+  opacity: 0.9;
+}
+
+.addtrader-modal .modal-footer {
+  border-top: 1px solid #e5e5e5;
+  padding: 10px 15px;
+  background-color: #f8f9fa;
+}
+
+/* ปรับพื้นหลังของ Modal */
+.custom-modal .modal-dialog {
+  max-width: 800px;
+  margin: 1.75rem auto;
+}
+.custom-modal .modal-content {
+  border-radius: 15px; /* โค้งมน */
+  border: none;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  font-family: "Noto Sans Thai", sans-serif;
+}
+
+/* ปรับ Header ของ Modal */
+.custom-modal .modal-header {
+  background: var(--greenbase);
+  color: white;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+/* ปรับ Body ของ Modal */
+.custom-modal .modal-body {
+  padding: 20px;
+  font-size: 16px;
+  color: #333;
+}
+
+/* ปรับ Footer ของ Modal */
+.custom-modal .modal-footer {
+  background: #f8f9fa;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+/* ปรับแต่งปุ่ม */
+.custom-modal .btn-primary {
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.custom-modal .btn-danger {
+  background-color: #dc3545;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.custom-modal .btn-danger:hover {
+  background-color: #c82333;
+}
+
+/* ทำให้ข้อมูลดูเป็นระเบียบมากขึ้น */
+.custom-modal p {
+  margin-bottom: 10px;
+}
+
+.custom-modal ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.custom-modal li {
+  background: #f1f1f1;
+  padding: 8px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+/* font alert */
+.swal-popup {
+  font-family: "Noto Sans Thai", sans-serif !important;
+}
+
+.swal-title {
+  font-family: "Noto Sans Thai", sans-serif !important;
+  font-size: 20px;
+}
+
+.swal-confirm-button {
+  font-family: "Noto Sans Thai", sans-serif !important;
+}
+
+.clear-search-btn {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.clear-search-btn:hover {
+  background-color: #e0e0e0;
+}

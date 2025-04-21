@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap");
+
+:root {
+  --font-family: "Noto Sans Thai", serif;
+  --yellow: #ffd700;
+  --black: #3d3d3d;
+  --gray: #bebebe;
+  --graylight1: #d9d9d9;
+  --navy: #1f2937;
+  --greenbase: #266b61;
+  --greenlight: #1d7768;
+  --greenlight2: #1f9480;
+  --greendark: #0b3e3c;
+}
+
+.TrainRegisPass-container-search {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.TrainRegisPass-container-search input {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  color: #374151;
+  background-color: #ffffff;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  width: 50%;
+}
+
+.TrainRegisPass-container-search-input {
+  font-family: var(--font-family);
+  position: relative;
+  width: 14%;
+  margin-left: 53px;
+  margin-top: 30px;
+}
+
+.TrainRegisPass-container-search-input input {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem 0.5rem 2.5rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.TrainRegisPass-container-search-input input:focus {
+  border-color: var(--greenbase);
+  box-shadow: var(--greenbase);
+}
+
+.TrainRegisPass-container-search-input .bi {
+  position: absolute;
+  left: 12px;
+  top: 55%;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  color: #999;
+}
+
+.TrainRegisPass-container {
+  display: flex;
+  font-family: var(--font-family);
+}
+
+.TrainRegisPass-container-link {
+  margin-left: 53px;
+  margin-top: 45px;
+  gap: 1.5rem;
+  justify-content: start;
+}
+
+.TrainRegisPass-container-link {
+  display: flex;
+  margin-top: 45px;
+  gap: 1.5rem;
+  transition: transform 0.3s ease-in-out;
+  justify-content: start;
+  flex-grow: 1;
+  margin-left: 3rem;
+}
+
+.TrainRegisPass-nav-item {
+  color: #333;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  font-family: var(--font-family);
+}
+
+.TrainRegisPass-nav-item:hover {
+  color: var(--greenlight2);
+}

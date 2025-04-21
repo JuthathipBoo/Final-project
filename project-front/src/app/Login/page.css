@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap");
+
+:root {
+  --font-family: "Noto Sans Thai", serif;
+  --yellow: #ffd700;
+  --black: #3d3d3d;
+  --gray: #bebebe;
+  --navy: #1f2937;
+  --greenbase: #266b61;
+  --greenlight: #1d7768;
+  --greenlight2: #1f9480;
+  --greendark: #0b3e3c;
+}
+
+body {
+  margin: 0;
+  font-family: "Noto Sans Thai", serif;
+  background: rgb(247, 247, 247);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #333;
+}
+
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  font-family: var(--font-family);
+}
+
+.login-container {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  padding: 2rem 2.5rem;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+.login-container .header h1 {
+  background: linear-gradient(
+    135deg,
+    var(--greenbase),
+    var(--greenlight)
+  ); 
+  border-radius: 50px 20px;
+  padding: 1.8rem 1rem; 
+  margin-bottom: 2rem;
+  text-align: center;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12); 
+  font-size: 2.3rem; 
+  color: white; 
+  font-weight: bold;
+  font-family: var(--font-family);
+}
+
+.login-container .header p {
+  font-size: 1.2rem;
+  color: var(--black);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-family: var(--font-family);
+}
+
+.login-container .header span  {
+  background-color: var(--greenbase);
+  padding: 5px 10px 5px 10px;
+  border-radius: 8px;
+  color: white;
+  font-family: var(--font-family);
+  
+}
+
+form{
+  margin-top: 1rem;
+}
+
+
+.input-group {
+  margin-bottom: 1.5rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+}
+
+.input-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  font-family: var(--font-family);
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.input-wrapper .bi {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  color: #999;
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding: 0.8rem 1rem 0.8rem 2.5rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-wrapper input:focus {
+  border-color: var(--greenlight2);
+  box-shadow: 0 0 5px rgba(106, 17, 203, 0.2);
+}
+
+.btn-primary {
+  width: 100%;
+  max-width: 400px;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background: var(--greenbase);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  font-family: var(--font-family);
+}
+
+.btn-primary:hover {
+  transform: translateX(-2px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap");
+
+:root {
+  --font-family: "Noto Sans Thai", serif;
+  --yellow: #ffd700;
+  --black: #3d3d3d;
+  --gray: #bebebe;
+  --navy: #1f2937;
+  --greenbase: #266b61;
+  --greenlight: #1d7768;
+  --greenlight2: #1f9480;
+  --greendark: #0b3e3c;
+}
+.profile-container {
+          padding: 1.5rem;
+          min-height: 100vh;
+          background-color: #f3f4f6;
+          font-family: var(--font-family);
+          /* max-width: 80rem;
+          margin: 0 auto;
+          background-color: #ffffff;
+          border-radius: 1rem;
+          box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+            0 4px 6px -2px rgba(0, 0, 0, 0.05);
+          overflow: hidden; */
+        }
+
+.profile-container-title{
+  padding: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+  border-color: #e5e7eb;
+  background-color: var(--greenbase);
+}
+
+.text-header {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: white;
+}

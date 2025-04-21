@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap");
+
+:root {
+  --font-family: "Noto Sans Thai", serif;
+  --yellow: #ffd700;
+  --black: #3d3d3d;
+  --gray: #bebebe;
+  --navy: #1f2937;
+  --greenbase: #266b61;
+  --greenlight: #1d7768;
+  --greenlight2: #1f9480;
+  --greendark: #0b3e3c;
+}
+
+.navbar {
+  background-color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1500px;
+  margin: 15px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--greenbase);
+  text-decoration: none;
+  font-family: var(--font-family);
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  transition: transform 0.3s ease-in-out;
+  justify-content: start;
+  flex-grow: 1;
+  margin-left: 5rem;
+}
+
+.nav-item {
+  color: #333;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  font-family: var(--font-family);
+}
+
+.nav-item:hover {
+  color: var(--greenlight2);
+  text-decoration: underline;
+}
+
+.user-section {
+  display: flex;
+  align-items: center;
+}
+
+.user-icon {
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease;
+  margin-left: 1rem;
+}
+
+.user-icon:hover {
+  color: var(--greenlight2);
+}
+
+
+.dropdown {
+  margin-left: 1rem;
+}
+
+
+.dropdown-menu.show {
+  margin-top: 0.3rem; 
+  left: 0 ; 
+  transform: translateX(0) ; 
+}
+
+
+.dropdown-menu {
+  min-width: 200px; 
+  max-width: 300px;
+  padding: 0.5rem;
+  border-radius: 8px; 
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+  font-family: var(--font-family);
+}
+
+.dropdown-menu .logout-btn {
+  width: 100%;
+  text-align: right;
+  font-size: 14px;
+  color: red;
+}
+
+.dropdown-menu .logout-btn:hover {
+  background-color: #f1f1f1;
+  color: red ;
+}
+
+
+.dropdown-item {
+  text-align: left;
+  padding: 10px 15px;
+  font-size: 16px;
+}
+
+.dropdown-item:not(.logout-btn):active {
+  background-color: var(--greenlight2) !important;
+  color: white ;
+}
+
+
+
+.dropdown-item:not(.logout-btn):hover {
+  background-color: #f1f1f1;
+  color: #333 ;
+}
+
+
+
+
+

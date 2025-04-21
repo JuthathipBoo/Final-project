@@ -1,0 +1,243 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap");
+
+:root {
+  --font-family: "Noto Sans Thai", serif;
+  --yellow: #ffd700;
+  --black: #3d3d3d;
+  --gray: #bebebe;
+  --graylight1: #d9d9d9;
+  --navy: #1f2937;
+  --greenbase: #266b61;
+  --greenlight: #1d7768;
+  --greenlight2: #1f9480;
+  --greendark: #0b3e3c;
+}
+
+.TrainCourse-container-card {
+  font-family: var(--font-family);
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 10px;
+  margin-top: 45px;
+  gap: 1.5rem;
+  transition: transform 0.3s ease-in-out;
+  justify-content: start;
+  flex-grow: 1;
+  margin-left: 3rem;
+}
+
+.TrainRegis-container-card {
+  font-family: var(--font-family);
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 10px;
+  margin-top: 45px;
+  gap: 1.5rem;
+  transition: transform 0.3s ease-in-out;
+  justify-content: start;
+  flex-grow: 1;
+  margin-left: 3rem;
+}
+
+.TrainRegisPass-container-card {
+  font-family: var(--font-family);
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 10px;
+  margin-top: 45px;
+  gap: 1.5rem;
+  transition: transform 0.3s ease-in-out;
+  justify-content: start;
+  flex-grow: 1;
+  margin-left: 3rem;
+}
+
+.TrainRegisReject-container-card {
+  font-family: var(--font-family);
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 10px;
+  margin-top: 45px;
+  gap: 1.5rem;
+  transition: transform 0.3s ease-in-out;
+  justify-content: start;
+  flex-grow: 1;
+  margin-left: 3rem;
+}
+
+.TrainRegisWait-container-card {
+  font-family: var(--font-family);
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 10px;
+  margin-top: 45px;
+  gap: 1.5rem;
+  transition: transform 0.3s ease-in-out;
+  justify-content: start;
+  flex-grow: 1;
+  margin-left: 3rem;
+}
+
+.Traininghistory-container-card {
+  font-family: var(--font-family);
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 10px;
+  margin-top: 45px;
+  gap: 1.5rem;
+  transition: transform 0.3s ease-in-out;
+  justify-content: start;
+  flex-grow: 1;
+  margin-left: 3rem;
+}
+
+.CourseStatusReject-container-card {
+  font-family: var(--font-family);
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 10px;
+  margin-top: 45px;
+  gap: 1.5rem;
+  transition: transform 0.3s ease-in-out;
+  justify-content: start;
+  flex-grow: 1;
+  margin-left: 3rem;
+}
+
+.CourseStatusWait-container-card {
+  font-family: var(--font-family);
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 10px;
+  margin-top: 45px;
+  gap: 1.5rem;
+  transition: transform 0.3s ease-in-out;
+  justify-content: start;
+  flex-grow: 1;
+  margin-left: 3rem;
+}
+
+.CourseStatusPass-container-card {
+  font-family: var(--font-family);
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 10px;
+  margin-top: 45px;
+  gap: 1.5rem;
+  transition: transform 0.3s ease-in-out;
+  justify-content: start;
+  flex-grow: 1;
+  margin-left: 3rem;
+}
+.card {
+  width: 18rem;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.card-img-top {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.card-link-add{
+  font-size: 26px;
+  color: var(--greenbase);
+}
+
+.card-subtitle {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.card-text .bold-text {
+  font-weight: bold;
+  color: #333;
+}
+
+.card-text .time-place {
+  margin-bottom: 8px;
+}
+
+/* .card-link-detail {
+  
+  font-size: 12px;
+  color: #7e7e80;
+  cursor: pointer;
+  text-decoration-line: none;
+}
+
+.card-link-detail:hover {
+  text-decoration-line: underline;
+  color: #7e7e80;
+} */
+
+.card-text .time-place-link a{
+  font-size: 12px;
+  color: #7e7e80;
+  cursor: pointer;
+  text-decoration-line: none;
+}
+
+.card-text .time-place-link a:hover{
+  text-decoration-line: underline;
+  color: #7e7e80;
+}
+
+.card-status-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: orange;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  z-index: 2;
+}
+
+.status-ยืนยันการผ่านอบรม {
+  color: green; /* เขียว */
+  font-weight: bold;
+}
+
+.status-ไม่ผ่านการอบรม {
+  color: red; /* แดง */
+  font-weight: bold;
+}
+
+.status-รอยืนยันการผ่านอบรม {
+  color: orange; /* ส้ม */
+  font-weight: bold;
+}
+
+
+

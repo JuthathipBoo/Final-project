@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap");
+
+:root {
+  --font-family: "Noto Sans Thai", serif;
+  --yellow: #ffd700;
+  --black: #3d3d3d;
+  --gray: #bebebe;
+  --navy: #1f2937;
+  --greenbase: #266b61;
+  --greenlight: #1d7768;
+  --greenlight2: #1f9480;
+  --greendark: #0b3e3c;
+}
+
+body {
+  margin: 0;
+  font-family: "Noto Sans Thai", serif;
+  background: rgb(247, 247, 247);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #333;
+}
+
+/* .container-card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  padding: 2rem;
+  background-color: #fff;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+}
+
+.card {
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  width: 300px;
+}
+
+.card-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 240px;
+  height: 240px;
+}
+
+.card-container-admin .card-body button {
+  background-color: var(--greenbase);
+  border: none;
+}
+
+.card-container-admin .card {
+  background-color: var(--greenbase);
+}
+
+.card-container-admin .card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-container-admin .card-body span {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  font-family: var(--font-family);
+}
+
+.card-container-trader .card-body button {
+          background-color: #fff;
+          border: none;
+        }
+
+.card-container-trader .card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-container-trader .card-body span {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  font-family: var(--font-family);
+} */
+
+.container-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  height: 100vh;
+  font-family: var(--font-family);
+}
+
+.card-container-admin,
+.card-container-trader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-2px); /* เพิ่มลูกเล่นการเลื่อนขึ้นเมื่อ hover */
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.card-container-admin span {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.card-container-trader span {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: var(--greenbase);
+}
+
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.card-container-admin button i {
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.card-container-admin button:hover i {
+  color: #f5f4f4; /* สีของไอคอนเมื่อ hover */
+}
+
+.card-container-trader button i {
+  color: var(--greenbase);
+  transition: color 0.3s ease;
+}
+
+.card-container-trader button:hover i {
+  color: var(--greenlight); /* สีของไอคอนเมื่อ hover */
+}
+
+.container-card {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 30px;
+}
+
+.card-container-admin,
+.card-container-trader {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-container-admin .card {
+  background-color: var(--greenbase);
+}
+
+.card-container-trader .card {
+  background-color: #f5f5f5;
+}
+

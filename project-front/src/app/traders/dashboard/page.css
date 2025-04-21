@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap");
+
+:root {
+  --font-family: "Noto Sans Thai", serif;
+  --yellow: #ffd700;
+  --black: #3d3d3d;
+  --gray: #bebebe;
+  --graylight1: #d9d9d9;
+  --navy: #1f2937;
+  --greenbase: #266b61;
+  --greenlight: #1d7768;
+  --greenlight2: #1f9480;
+  --greendark: #0b3e3c;
+}
+
+.dashboardTrader-container {
+  font-family: var(--font-family);
+}
+
+.dashboardTrader-container-card {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-left: 5rem;
+  margin-top: 5rem;
+}
+
+.dashboardTrader-container-card .card {
+  width: 18rem;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  /* transition: all 0.3s ease; */
+}
+
+.dashboardTrader-container-activity {
+  margin-left: 5rem;
+  margin-top: 3rem;
+}
+
+.dashboardTrader-container-activity .bg {
+  background-color: var(--greenlight);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.dashboardTrader-container-card-activity {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-left: 5rem;
+  margin-top: 3rem;
+
+}
+
+.dashboardTrader-container-card-activity .card {
+  width: 18rem;
+  height: 15rem;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  /* transition: all 0.3s ease; */
+}
+
+.status-card-title {
+  color: white;
+}
+
+.status-card-text {
+  text-align: end;
+  margin-right: 1rem;
+  color: white;
+}
+
+.end-card-title {
+  color: white;
+}
+
+.end-card-text {
+  text-align: end;
+  margin-right: 1rem;
+  color: white;
+}
+
+.tableTrader-card-title {
+  font-size: larger;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  color: var(--greenlight);
+}
+
+.tableTrader-card-text {
+  width: 100%;
+  display: block;
+  max-height: 300px; /* ✅ กำหนดความสูงของตาราง */
+  overflow-y: auto; /* ✅ ถ้าข้อมูลเกินความสูง ให้ Scroll แนวตั้ง */
+  border-collapse: collapse;
+}
+
+.tableTrader-card-text thead {
+  border-bottom: 2px solid var(--greenlight);
+  position: sticky;
+  top: 0;
+  background: white; /* ✅ ทำให้หัวตารางไม่เลื่อนตาม */
+  z-index: 10;
+}
+
+.tableTrader-card-text th {
+  padding: 12px; /* เพิ่ม padding ให้ตัวหนังสือมีพื้นที่ */
+  padding-left: 2.3rem;
+  white-space: nowrap; /* ป้องกันไม่ให้ตัวหนังสือขึ้นบรรทัดใหม่ */
+  text-align: center;
+  font-size: 16px; /* ปรับขนาดตัวอักษร */
+  color: var(--gray);
+  gap: 1rem;
+}
+
+.tableTrader-card-text td {
+  margin-top: 1rem;
+  padding: 10px;
+  /* border: 1px solid #ddd; */
+  text-align: center;
+  font-size: 14px;
+}
+
+.tableTrader-regis-card-title {
+  font-size: larger;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  color: white;
+}
+
+.tableTrader-regis-card-text {
+  width: 100%;
+}
+
+.tableTrader-regis-card-text th {
+  padding: 12px; /* เพิ่ม padding ให้ตัวหนังสือมีพื้นที่ */
+  white-space: nowrap; /* ป้องกันไม่ให้ตัวหนังสือขึ้นบรรทัดใหม่ */
+  text-align: center;
+  font-size: 16px; /* ปรับขนาดตัวอักษร */
+  color: var(--gray);
+}
+
+.tableTrader-regis-card-text td {
+  padding: 6px;
+  /* border: 1px solid #ddd; */
+  text-align: center;
+  font-size: 14px;
+  color: white;
+}
+
+.status-ยืนยันการลงทะเบียน {
+  color: green;
+  font-weight: bold;
+}
+.status-ไม่อนุมัติ {
+  color: red;
+  font-weight: bold;
+}
+.status-รออนุมัติ {
+  color: orange;
+  font-weight: bold;
+}

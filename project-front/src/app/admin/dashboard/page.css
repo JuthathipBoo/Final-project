@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap");
+
+:root {
+  --font-family: "Noto Sans Thai", serif;
+  --yellow: #ffd700;
+  --black: #3d3d3d;
+  --gray: #bebebe;
+  --graylight1: #d9d9d9;
+  --navy: #1f2937;
+  --greenbase: #266b61;
+  --greenlight: #1d7768;
+  --greenlight2: #1f9480;
+  --greendark: #0b3e3c;
+}
+
+.dashboard-container {
+  font-family: var(--font-family);
+}
+
+.dashboard-container-card {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-left: 5rem;
+  margin-top: 5rem;
+}
+
+.dashboard-container-card .card {
+  width: 18rem;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  /* transition: all 0.3s ease; */
+}
+
+.dashboard-container-activity {
+  margin-left: 5rem;
+  margin-top: 3rem;
+}
+
+.dashboard-container-activity .bg {
+  background-color: var(--greenlight);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.dashboard-container-card-activity {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-left: 5rem;
+  margin-top: 3rem;
+}
+
+.dashboard-container-card-activity .card {
+  width: 18rem;
+  height: 15rem;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  /* transition: all 0.3s ease; */
+}
+
+.trader-card-title {
+  color: var(--greenlight);
+}
+
+.training-card-title {
+  color: var(--greenlight);
+}
+
+.regis-card-title {
+  color: var(--greenlight);
+}
+
+.trader-card-text {
+  text-align: end;
+  margin-right: 1rem;
+  color: var(--greenlight);
+}
+
+.training-card-text {
+  text-align: end;
+  margin-right: 1rem;
+  color: var(--greenlight);
+}
+
+.regis-card-text {
+  text-align: end;
+  margin-right: 1rem;
+  color: var(--greenlight);
+}
+
+.table-card-title {
+  font-size: larger;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  color: var(--greenlight);
+}
+
+.table-card-text {
+  width: 100%;
+  display: block;
+  max-height: 300px; /* ✅ กำหนดความสูงของตาราง */
+  overflow-y: auto; /* ✅ ถ้าข้อมูลเกินความสูง ให้ Scroll แนวตั้ง */
+  border-collapse: collapse;
+}
+
+.table-card-text thead {
+  border-bottom: 2px solid var(--greenlight);
+  position: sticky;
+  top: 0;
+  background: white; /* ✅ ทำให้หัวตารางไม่เลื่อนตาม */
+  z-index: 10;
+}
+
+.table-card-text th {
+  padding: 12px; /* เพิ่ม padding ให้ตัวหนังสือมีพื้นที่ */
+  white-space: nowrap; /* ป้องกันไม่ให้ตัวหนังสือขึ้นบรรทัดใหม่ */
+  text-align: center;
+  font-size: 16px; /* ปรับขนาดตัวอักษร */
+  color: var(--gray);
+}
+
+.table-card-text td {
+  padding: 10px;
+  /* border: 1px solid #ddd; */
+  text-align: center;
+  font-size: 14px;
+}
+
+.table-regis-card-title {
+  font-size: larger;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  color: white;
+}
+
+.table-regis-card-text {
+  width: 100%;
+}
+
+
+
+.table-regis-card-text th {
+  padding: 12px; /* เพิ่ม padding ให้ตัวหนังสือมีพื้นที่ */
+  white-space: nowrap; /* ป้องกันไม่ให้ตัวหนังสือขึ้นบรรทัดใหม่ */
+  text-align: center;
+  font-size: 16px; /* ปรับขนาดตัวอักษร */
+  color: var(--gray);
+}
+
+.table-regis-card-text td {
+  padding: 6px;
+  /* border: 1px solid #ddd; */
+  text-align: center;
+  font-size: 14px;
+  color: white;
+}
