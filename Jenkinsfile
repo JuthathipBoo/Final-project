@@ -20,14 +20,14 @@ pipeline {
                 stage('Frontend Lint') {
                     steps {
                         dir('frontend') {
-                            sh 'npm run lint || true'
+                            sh 'npm run lint'
                         }
                     }
                 }
                 stage('Backend Lint') {
                     steps {
                         dir('backend') {
-                            sh 'npm run lint || true'
+                            sh 'npm run lint'
                         }
                     }
                 }
